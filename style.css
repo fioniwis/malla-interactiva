@@ -1,14 +1,22 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #e8f4fb;
+  background: #f3f0ff;
   margin: 0;
   padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 h1 {
   text-align: center;
-  color: #0b4f78;
+  color: #6b4fa4;
   margin-bottom: 30px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #d9d3ec;
 }
 
 .grid {
@@ -19,24 +27,30 @@ h1 {
 }
 
 .semestre {
-  background: #ffffff;
-  border: 3px solid #b3d9f0;
+  background: #e6e0f8;
+  border: 2px solid #c9b7f2;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   width: 270px;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
+  animation: slideUp 0.6s ease;
 }
 
 .semestre:hover {
   transform: scale(1.03);
 }
 
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 .semestre h2 {
-  color: #0b4f78;
+  color: #6b4fa4;
   font-size: 1.2rem;
   margin-bottom: 12px;
-  border-bottom: 2px solid #c9e6f5;
+  border-bottom: 2px solid #dcd3f5;
   padding-bottom: 5px;
 }
 
@@ -44,19 +58,19 @@ h1 {
   display: flex;
   align-items: center;
   margin: 8px 0;
-  background: #f0f9ff;
-  border-radius: 6px;
+  background: #f8f6ff;
+  border-radius: 8px;
   padding: 6px 10px;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s ease;
 }
 
 .materia:hover {
-  background-color: #d9efff;
+  background-color: #e0d7f9;
 }
 
 .materia input[type="checkbox"]:checked + label {
   text-decoration: line-through;
-  color: #888;
+  color: #999;
 }
 
 .materia input {
