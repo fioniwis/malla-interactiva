@@ -1,6 +1,6 @@
 body {
-  font-family: sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e6f0f5;
   margin: 0;
   padding: 20px;
 }
@@ -8,6 +8,7 @@ body {
 h1 {
   text-align: center;
   color: #0a4f8a;
+  margin-bottom: 30px;
 }
 
 .grid {
@@ -19,21 +20,42 @@ h1 {
 
 .semestre {
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  transition: transform 0.2s;
+}
+
+.semestre:hover {
+  transform: scale(1.03);
 }
 
 .semestre h2 {
   color: #0a4f8a;
-  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #cce5ff;
+  padding-bottom: 5px;
 }
 
 .materia {
   display: flex;
   align-items: center;
-  margin: 5px 0;
+  margin: 8px 0;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 6px 10px;
+  transition: background-color 0.2s;
+}
+
+.materia:hover {
+  background-color: #e2ecf4;
+}
+
+.materia input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #888;
 }
 
 .materia input {
