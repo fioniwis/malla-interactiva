@@ -76,26 +76,35 @@ const malla = [
   },
   {
     semestre: "Semestre 9",
-    materias: [
-      "PRÁCTICA PROFESIONAL I"
-    ]
+    materias: ["PRÁCTICA PROFESIONAL I"]
   },
   {
     semestre: "Semestre 10",
-    materias: [
-      "PRÁCTICA PROFESIONAL II"
-    ]
+    materias: ["PRÁCTICA PROFESIONAL II"]
   }
 ];
 
 const contenedor = document.getElementById("malla");
+const barra = document.getElementById("progreso-barra");
+const texto = document.getElementById("progreso-texto");
 
 function guardarEstado(nombre, estado) {
   localStorage.setItem(nombre, estado);
+  actualizarProgreso();
 }
 
 function obtenerEstado(nombre) {
   return localStorage.getItem(nombre) === "true";
+}
+
+function actualizarProgreso() {
+  const checkboxes = document.querySelectorAll(".materia input[type='checkbox']");
+  const total = checkboxes.length;
+  const completadas = Array.from(checkboxes).filter(cb => cb.checked).length;
+  const porcentaje = Math.round((completadas / total) * 100);
+
+  barra.style.width = porcentaje + "%";
+  texto.textContent = `${porcentaje}% completado`;
 }
 
 malla.forEach(bloque => {
@@ -127,3 +136,5 @@ malla.forEach(bloque => {
 
   contenedor.appendChild(semestreDiv);
 });
+
+actualizarProgreso();
