@@ -101,3 +101,9 @@ h1 {
   color: ##ffc300;
   font-weight: bold;
 }
+.materia input[type="checkbox"]:checked {
+  accent-color: #ffc107; /* amarillo pastel */
+}
+.materia label {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
