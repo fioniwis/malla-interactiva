@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #0a4f8a;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.semestre {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.semestre h2 {
+  color: #0a4f8a;
+  border-bottom: 1px solid #ddd;
+}
+
+.materia {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.materia input {
+  margin-right: 10px;
+}
