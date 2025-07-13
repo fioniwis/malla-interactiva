@@ -76,3 +76,28 @@ h1 {
 .materia input {
   margin-right: 10px;
 }
+#progreso-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#progreso-barra {
+  height: 100%;
+  width: 0%;
+  background-color: #9b89c6; /* Lila suave */
+  transition: width 0.3s ease;
+}
+
+#progreso-texto {
+  text-align: center;
+  margin-top: 10px;
+  color: ##ffc300;
+  font-weight: bold;
+}
